@@ -1,4 +1,5 @@
-# loop through .sh files in ./install and execute them
-for file in ./install/*.sh; do
-  bash "$file" -H 
-done
+# install package managers like brew
+./install/install-1.sh
+
+# install packages
+./install/install-2.sh
