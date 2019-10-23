@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # install antigen, a zsh manager
 brew install antigen
 
