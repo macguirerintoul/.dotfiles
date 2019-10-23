@@ -33,6 +33,8 @@
       "language-toml"
       "snippets"
       "autocomplete-snippets"
+      "spell-check"
+      "github"
     ]
     telemetryConsent: "limited"
     themes: [

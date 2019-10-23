@@ -1,8 +1,10 @@
+#!/bin/bash
+
 # install package managers like brew
-./install/install-1.sh
+bash ./install/install-1.sh
 
 # install packages
-./install/install-2.sh
+bash ./install/install-2.sh
 
 # run additional setup steps
-./setup.sh
+bash ./setup.sh
