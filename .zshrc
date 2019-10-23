@@ -1,6 +1,6 @@
 alias reload='source ~/.zshrc'
 # dotfiles alias
-alias dotfiles='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias df='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 # Load nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
