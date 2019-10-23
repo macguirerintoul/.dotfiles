@@ -3,3 +3,6 @@
 
 # install packages
 ./install/install-2.sh
+
+# run additional setup steps
+./setup.sh
