@@ -11,7 +11,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 eval $(thefuck --alias)
 
-source $HOME/antigen.zsh
+source /usr/local/share/antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle z
 antigen bundle zsh-users/zsh-syntax-highlighting
