@@ -11,5 +11,5 @@ brew cask install iterm2
 brew cask install spotify
 brew cask install atom
 
-# install atom package to sync packages
-apm install package-sync
+# install atom packages and themes from package.list
+apm install --packages-file ~/.atom/package.list
