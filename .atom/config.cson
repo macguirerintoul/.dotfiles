@@ -61,7 +61,10 @@
     disabling:
       disableWhenNoEslintConfig: false
     lintHtmlFiles: true
+  "linter-stylelint":
+    fixOnSave: true
   "linter-ui-default":
+    panelHeight: 188
     showPanel: true
   "nord-atom-ui":
     darkerFormFocusEffect: true
