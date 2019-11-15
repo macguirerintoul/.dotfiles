@@ -65,7 +65,6 @@
     fixOnSave: true
   "linter-ui-default":
     panelHeight: 188
-    showPanel: true
   "nord-atom-ui":
     darkerFormFocusEffect: true
   "package-sync":
@@ -89,6 +88,8 @@
     _lastBackupHash: "48193de3f6aafb1eaa2c3ffdb6efb12dc064d994"
     gistId: "87c291ce3eaebaa7d5ff5c5485e68837"
     personalAccessToken: "5559828498b237ba795f87cda3449981e49849c9"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "w3c-validation":
     validateOnSave: false
   welcome:
