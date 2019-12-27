@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install package managers like brew
-bash ./install/install-1.sh
+bash ./scripts/install-1.sh
 
 # install packages
-bash ./install/install-2.sh
+bash ./scripts/install-2.sh
