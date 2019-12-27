@@ -1,6 +1,5 @@
 alias reload='source ~/.zshrc'
 alias df='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-alias dfs='bash ~/sync.sh'
 
 g () {
   git add . && git commit -m "$1"
@@ -23,3 +22,4 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle mafredri/zsh-async
 antigen bundle sindresorhus/pure
 antigen apply
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
