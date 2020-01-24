@@ -3,24 +3,25 @@ alias dfg='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 df () {
   case ${1} in
-    -install ) 
+    i ) 
       ./install.sh
       ;;
-    -up ) 
+    u ) 
       echo "Uploading dotfiles..."
       dfg add -u # add changed files to commit
       dfg commit -m "upload dotfiles" # commit changed files
       dfg push # push
       echo "Upload complete."
       ;;
-    -down ) 
+    d ) 
       echo "Downloading dotfiles..."
       dfg pull # pull dotfiles from github
       echo "Download complete."
       ;;
-    *)  
-      echo "-up: upload dotfiles"
-      echo "-down: download dotfiles"
+    * )  
+      echo "i: run install script"
+      echo "u: upload dotfiles"
+      echo "d: download dotfiles"
       ;;
   esac
 }
@@ -30,7 +31,7 @@ g () {
   git add . && git commit -m "$1"
 }
 
-source $(brew --prefix)/share/antigen/antigen.zsh
+source $(brew --prefix)/share/antigen/antigen.zsh # source antigen since I install from brew
 
 antigen use oh-my-zsh
 antigen bundle z
@@ -45,9 +46,4 @@ antigen apply
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# If you come from bash you might have to change your $PATH.
-#export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 eval $(thefuck --alias) # setup the `fuck` command
-
-
