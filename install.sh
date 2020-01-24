@@ -10,3 +10,4 @@ brew cask install firefox
 brew cask install flux
 brew cask install iterm2
 brew cask install spotify
+brew cask install macs-fan-control
