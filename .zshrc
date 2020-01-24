@@ -1,25 +1,50 @@
-alias reload='source ~/.zshrc'
-alias df='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias reload='source ~/.zshrc' # alias to reload the zsh configuration
+alias dfg='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+df () {
+  case ${1} in
+    -up ) 
+      echo "Uploading dotfiles..."
+      dfg add -u # add changed files to commit
+      dfg commit -m "upload dotfiles" # commit changed files
+      dfg push # push
+      echo "Upload complete."
+      ;;
+    -down ) 
+      echo "Downloading dotfiles..."
+      dfg pull # pull dotfiles from github
+      echo "Download complete."
+      ;;
+    *)  
+      echo "-up: upload dotfiles"
+      echo "-down: download dotfiles"
+      ;;
+  esac
+}
+
+# shortcut to add all modified files & commit
 g () {
   git add . && git commit -m "$1"
 }
+
+source $(brew --prefix)/share/antigen/antigen.zsh
+
+antigen use oh-my-zsh
+antigen bundle z
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+# workaround for https://github.com/zsh-users/antigen/issues/675
+THEME=robbyrussell
+antigen list | grep $THEME; if [ $? -ne 0 ]; then antigen theme $THEME; fi
+antigen apply
 
 # Load nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-eval $(thefuck --alias)
+eval $(thefuck --alias) # setup the `fuck` command
 
-source /usr/local/share/antigen/antigen.zsh
-antigen use oh-my-zsh
-antigen bundle z
-antigen bundle zsh-users/zsh-syntax-highlighting
-# next two lines are for the pure prompt
-antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
-antigen apply
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

@@ -43,9 +43,9 @@
     ]
     titleBar: "custom"
   editor:
-    fontFamily: "Inconsolata, Menlo, monospace"
-    fontSize: 17
-    lineHeight: 2
+    fontFamily: "Inconsolata, monospace"
+    fontSize: 18
+    lineHeight: 2.5
     softWrap: true
     tabType: "soft"
   "exception-reporting":
