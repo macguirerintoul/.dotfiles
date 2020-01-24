@@ -3,6 +3,9 @@ alias dfg='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
 df () {
   case ${1} in
+    -install ) 
+      ./install.sh
+      ;;
     -up ) 
       echo "Uploading dotfiles..."
       dfg add -u # add changed files to commit
