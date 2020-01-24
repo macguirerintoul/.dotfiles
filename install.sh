@@ -1,7 +1,12 @@
-#!/bin/bash
+# install homebrew, macOS package manager
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# install package managers like brew
-bash ./scripts/install-1.sh
+# install antigen, a zsh manager
+brew install antigen
 
-# install packages
-bash ./scripts/install-2.sh
+# install apps via cask
+brew cask install visual-studio-code
+brew cask install firefox
+brew cask install flux
+brew cask install iterm2
+brew cask install spotify
