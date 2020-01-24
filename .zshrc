@@ -8,6 +8,7 @@ df () {
       ;;
     u ) 
       echo "Uploading dotfiles..."
+      code --list-extensions > ~/.dfconfig/vscode-extensions.txt # export vscode extensions
       dfg add -u # add changed files to commit
       dfg commit -m "upload dotfiles" # commit changed files
       dfg push # push

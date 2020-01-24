@@ -11,3 +11,7 @@ brew cask install flux
 brew cask install iterm2
 brew cask install spotify
 brew cask install macs-fan-control
+
+while read LINE; do code --install-extension $LINE; done < ~/.dfconfig/vscode/extensions.txt
+
+
