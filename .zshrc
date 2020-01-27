@@ -32,6 +32,11 @@ g () {
   git add . && git commit -m "$1"
 }
 
+compresspdf() {
+    echo 'Usage: compresspdf [input file] [output file]'
+    gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
+}
+
 source $(brew --prefix)/share/antigen/antigen.zsh # source antigen since I install from brew
 
 antigen use oh-my-zsh
