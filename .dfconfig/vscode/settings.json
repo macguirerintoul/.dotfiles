@@ -12,5 +12,8 @@
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.lineHeight": 1.2,
     "terminal.integrated.fontSize": 13,
-    "terminal.integrated.cursorStyle": "line"
+    "terminal.integrated.cursorStyle": "line",
+    "editor.insertSpaces": false,
+		"editor.detectIndentation": false,
+		"prettier.useTabs": true
 }
