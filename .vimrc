@@ -1,4 +1,11 @@
-set tabstop=2 " set display width of tab; 1 tab = x space with                                                           
-set expandtab " transform tab to x space (x is tabstop)                                                               
-set autoindent " auto indent; new line with number of space at the beginning same as previous                                                                      
-set shiftwidth=2 " number of space append to lines when type >> 
+call plug#begin()
+Plug 'posva/vim-vue'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdtree'
+Plug 'jiangmiao/auto-pairs'
+call plug#end()
+map <C-n> :NERDTreeToggle<CR>
+map <C-p> :FZF<CR>
+set tabstop=2 " set display width of tab; 1 tab = x space with                  
