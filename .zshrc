@@ -2,6 +2,12 @@ alias reload='source ~/.zshrc' # alias to reload the zsh configuration
 alias dfg='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias python='python3'
 alias pip='python -m pip'
+alias zrc='vi ~/.zshrc'
+
+upass() {
+	python3 ~/dev/upass-sfu/upass.py
+}
+
 df () {
   case ${1} in
     i ) 
@@ -55,6 +61,7 @@ antigen use oh-my-zsh
 antigen bundle z
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle "MichaelAquilina/zsh-you-should-use"
 # workaround for https://github.com/zsh-users/antigen/issues/675
 THEME=robbyrussell
 antigen list | grep $THEME; if [ $? -ne 0 ]; then antigen theme $THEME; fi
