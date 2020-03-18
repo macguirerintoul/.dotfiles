@@ -15,5 +15,11 @@
     "terminal.integrated.cursorStyle": "line",
     "editor.insertSpaces": false,
 		"editor.detectIndentation": false,
-		"prettier.useTabs": true
+		"prettier.useTabs": true,
+		"files.exclude": {
+			"**/.classpath": true,
+			"**/.project": true,
+			"**/.settings": true,
+			"**/.factorypath": true
+		}
 }
