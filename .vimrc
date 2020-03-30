@@ -11,6 +11,7 @@ Plug 'bluz71/vim-nightfly-guicolors' " color scheme
 call plug#end()
 
 " Setup color scheme
+syntax enable
 set termguicolors
 set background=dark
 colorscheme nightfly
@@ -29,6 +30,17 @@ let g:ale_fix_on_save = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 
+" vim configuration
+set backspace=indent,eol,start " allows deletion of stuff in insert mode
+set tabstop=2 " set display width of a tab (in spaces)
+set cursorline " highlight the line where the cursor is
+set wildmenu " autocompletion for vim commands
+set showmatch " highlight matching [{()}]
+set number relativenumber " turn on both line numbers and relative line numbers
+set lazyredraw " redraw the screen less frequently
+set incsearch " search as characters are entered
+set hlsearch " highlight search results
+
 " Key mapping
 " Ctrl + n toggles NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -36,12 +48,9 @@ map <C-n> :NERDTreeToggle<CR>
 " Ctrl + p opens fzf in git files mode
 map <C-p> :GFiles<CR>
 
-" vim configuration
-set backspace=indent,eol,start
-set tabstop=2 " set display width of tab
-set cursorline
-set wildmenu
-set showmatch
+" \ + <space> turns off highlight from previous search
+nnoremap <leader><space> :nohlsearch<CR>
 
-" turn hybrid line numbers on
-set number relativenumber
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk

@@ -1,16 +1,19 @@
-alias reload='source ~/.zshrc' # alias to reload the zsh configuration
+alias rl='source ~/.zshrc' # alias to reload the zsh configuration
 alias dfg='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias python='python3'
 alias zrc='vi ~/.zshrc'
+alias vrc='vi ~/.vimrc'
 
+# renew upass automatically using @Armour's repo
 upass() {
 	python3 ~/dev/upass-sfu/upass.py
 }
 
+# dotfiles functions
 df () {
   case ${1} in
     i ) 
-      ./install.sh
+      ./install.sh # run the dotfiles install script
       ;;
     u ) 
       echo "Uploading dotfiles..."
@@ -33,6 +36,7 @@ df () {
   esac
 }
 
+# enable/disable custom DNS configuration
 dns() {
 	case ${1} in
 		on )
@@ -49,13 +53,16 @@ g () {
   git add . && git commit -m "$1"
 }
 
+# compress a PDF
 compresspdf() {
     echo 'Usage: compresspdf [input file] [output file]'
     gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
 }
 
-source $(brew --prefix)/share/antigen/antigen.zsh # source antigen since I install from brew
+# source antigen since I install from brew
+source $(brew --prefix)/share/antigen/antigen.zsh
 
+# antigen setup
 antigen use oh-my-zsh
 antigen bundle z
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -68,6 +75,8 @@ antigen apply
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-eval $(thefuck --alias) # setup the `fuck` command
+# setup the `fuck` command
+eval $(thefuck --alias) 
 
+# setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
