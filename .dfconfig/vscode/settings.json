@@ -1,14 +1,10 @@
 {
-    "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Ayu Dark Bordered",
-    "workbench.iconTheme": "ayu",
+  "workbench.colorTheme": "Night Owl",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "editor.fontSize": 18,
     "editor.tabSize": 2,
-    "editor.renderWhitespace": "all",
     "editor.lineHeight": 40,
-    "editor.formatOnSave": true,
     "workbench.startupEditor": "newUntitledFile",
     "terminal.integrated.lineHeight": 1.2,
     "terminal.integrated.fontSize": 14,
@@ -26,5 +22,20 @@
 		},
     "eslint.run": "onSave",
     "editor.fontFamily": "Iosevka, Menlo, Monaco, 'Courier New', monospace",
-    "editor.wordWrap": "bounded"
+    "prettier.requireConfig": true,
+    "vetur.format.defaultFormatter.html": "none",
+    "vetur.format.enable": false,
+    "editor.formatOnSave": true,
+    "workbench.preferredDarkColorTheme": "Night Owl",
+    "workbench.preferredLightColorTheme": "Night Owl Light",
+    "editor.minimap.renderCharacters": false,
+    "workbench.activityBar.visible": false,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "markdown.preview.scrollPreviewWithEditor": false,
+    "markdown.preview.scrollEditorWithPreview": false,
+    "banner-comments-plus.font": "Banner",
+    "stylelint.reportNeedlessDisables": true,
+    "window.autoDetectColorScheme": true
 }
