@@ -1,5 +1,6 @@
 alias rl='source ~/.zshrc' # alias to reload the zsh configuration
 alias dfg='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias gp='git push'
 alias python='python3'
 alias zrc='vi ~/.zshrc'
 alias vrc='vi ~/.vimrc'
