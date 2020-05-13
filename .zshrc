@@ -36,6 +36,7 @@ df () {
       ;;
     x )
       while read LINE; do code --install-extension $LINE; done < ~/.dfconfig/vscode/extensions.txt
+      ;;
     * )  
       echo "i: run install script"
       echo "u: upload dotfiles"
