@@ -18,9 +18,14 @@ df () {
       ;;
     u ) 
       echo "Uploading dotfiles..."
-      code --list-extensions > ~/.dfconfig/vscode-extensions.txt # export vscode extensions
+      code --list-extensions > ~/.dfconfig/vscode/extensions.txt # export vscode extensions
       dfg add -u # add changed files to commit
-      dfg commit -m "upload dotfiles" # commit changed files
+			if [ -z "$2" ] # if argument 2 is an empty string...
+  			then
+      		dfg commit -m "upload dotfiles" # commit changed files
+			else
+      	dfg commit -m "$2" # commit changed files
+			fi
       dfg push # push
       echo "Upload complete."
       ;;
