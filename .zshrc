@@ -34,10 +34,13 @@ df () {
       dfg pull # pull dotfiles from github
       echo "Download complete."
       ;;
+    x )
+      while read LINE; do code --install-extension $LINE; done < ~/.dfconfig/vscode/extensions.txt
     * )  
       echo "i: run install script"
       echo "u: upload dotfiles"
       echo "d: download dotfiles"
+      echo "x: install extensions"
       ;;
   esac
 }
