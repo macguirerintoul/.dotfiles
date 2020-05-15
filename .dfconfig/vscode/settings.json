@@ -4,7 +4,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.fontSize": 18,
   "editor.tabSize": 2,
-  "editor.lineHeight": 40,
+  "editor.lineHeight": 50,
   "workbench.startupEditor": "newUntitledFile",
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.fontSize": 14,
@@ -49,4 +49,9 @@
   "eslint.lintTask.options": "",
   "eslint.enable": false,
   "stylelint.enable": false,
+  "workbench.statusBar.visible": false,
+  "editor.fontLigatures": true,
+  "breadcrumbs.filePath": "off",
+  "breadcrumbs.symbolPath": "off",
+  "editor.wordWrap": "on",
 }
