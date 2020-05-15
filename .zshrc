@@ -90,3 +90,19 @@ eval $(thefuck --alias)
 
 # setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/macguire.rintoul/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/macguire.rintoul/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/macguire.rintoul/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/macguire.rintoul/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
