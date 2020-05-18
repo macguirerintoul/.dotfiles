@@ -35,13 +35,36 @@ df () {
       echo "Download complete."
       ;;
     x )
-      while read LINE; do code --install-extension $LINE; done < ~/.dfconfig/vscode/extensions.txt
+      extensions=$(cat ~/.dfconfig/vscode/extensions.txt)
+      installed=$(code --list-extensions)
+      while read LINE
+      do
+        if [[ $extensions != *$LINE* ]]
+        then 
+          echo "$LINE is not in extensions file. Uninstalling..."
+          code --uninstall-extension $LINE
+        fi
+      done < <(code --list-extensions)
+      while read LINE
+      do 
+        if [[ $installed == *$LINE* ]] # if extension is already installed, do nothing
+        then
+          echo "$LINE is already installed."
+        else # otherwise, install it
+          echo "$LINE is not yet installed. Installing..."
+          code --install-extension $LINE 
+        fi
+      done < ~/.dfconfig/vscode/extensions.txt
+      ;;
+    status )
+      dfg status
       ;;
     * )  
       echo "i: run install script"
       echo "u: upload dotfiles"
       echo "d: download dotfiles"
       echo "x: install extensions"
+      echo "status: git status of dotfiles"
       ;;
   esac
 }
@@ -74,11 +97,11 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 
 # antigen setup
 antigen use oh-my-zsh
+antigen theme robbyrussell
 antigen bundle z
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle "MichaelAquilina/zsh-you-should-use"
-antigen theme robbyrussell
+antigen bundle MichaelAquilina/zsh-you-should-use
 antigen apply
 
 # Load nvm
@@ -90,19 +113,3 @@ eval $(thefuck --alias)
 
 # setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/macguire.rintoul/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/macguire.rintoul/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/macguire.rintoul/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/macguire.rintoul/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
