@@ -39,13 +39,13 @@ df () {
       installed=$(code --list-extensions)
       while read LINE
       do
-        if [[ $extensions != *$LINE* ]]
-        then 
+        if [[ $extensions != *$LINE* ]] # if line from installed is not in extensions file...
+        then # uninstall it
           echo "$LINE is not in extensions file. Uninstalling..."
           code --uninstall-extension $LINE
-        fi
-      done < <(code --list-extensions)
-      while read LINE
+        fi # end if
+      done < <(code --list-extensions) # use each line of output as input to while read loop
+      while read LINE 
       do 
         if [[ $installed == *$LINE* ]] # if extension is already installed, do nothing
         then
@@ -53,8 +53,8 @@ df () {
         else # otherwise, install it
           echo "$LINE is not yet installed. Installing..."
           code --install-extension $LINE 
-        fi
-      done < ~/.dfconfig/vscode/extensions.txt
+        fi # end if
+      done < ~/.dfconfig/vscode/extensions.txt # use each line of file as input to while read loop
       ;;
     status )
       dfg status
