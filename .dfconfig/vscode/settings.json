@@ -37,5 +37,5 @@
   "telemetry.enableTelemetry": false,
   "editor.cursorBlinking": "phase",
   "editor.lineHeight": 48,
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
 }
