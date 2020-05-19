@@ -12,6 +12,6 @@ brew cask install iterm2
 brew cask install spotify
 brew cask install macs-fan-control
 
-while read LINE; do code --install-extension $LINE; done < ~/.dfconfig/vscode/extensions.txt
-
+# setup iTerm to support italics
+tic .dfconfig/xterm-256color-italic.terminfo
 

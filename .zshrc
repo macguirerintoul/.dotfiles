@@ -15,6 +15,7 @@ df () {
   case ${1} in
     i ) 
       ./install.sh # run the dotfiles install script
+			df x # run df x (not sure if this will work)
       ;;
     u ) 
       echo "Uploading dotfiles..."
