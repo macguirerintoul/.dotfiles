@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Night Owl Light",
+  "workbench.colorTheme": "Night Owl",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.fontSize": 18,
@@ -39,4 +39,5 @@
   "editor.lineHeight": 48,
   "editor.lineNumbers": "on",
   "explorer.openEditors.visible": 0,
+  "editor.cursorStyle": "block",
 }
