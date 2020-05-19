@@ -38,4 +38,5 @@
   "editor.cursorBlinking": "phase",
   "editor.lineHeight": 48,
   "editor.lineNumbers": "on",
+  "explorer.openEditors.visible": 0,
 }

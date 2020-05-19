@@ -13,8 +13,7 @@ call plug#end()
 " Setup color scheme
 syntax enable
 set termguicolors
-set background=dark
-colorscheme nightfly
+colorscheme night_owl_light
 
 " Configure coc
 set updatetime=300 " make it happen faster
