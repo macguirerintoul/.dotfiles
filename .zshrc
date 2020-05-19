@@ -70,6 +70,27 @@ df () {
   esac
 }
 
+# switch iTerm profile with system theme
+sith() {
+	val=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
+	if [[ $val == "Dark" ]]; then
+		i
+	fi
+}
+
+# toggle iTerm profile
+i() {
+	if [[ $ITERM_PROFILE == "Default" ]]; then
+		echo -ne "\033]50;SetProfile=Dark\a"
+		export ITERM_PROFILE="Dark"
+	else
+		echo -ne "\033]50;SetProfile=Default\a"
+		export ITERM_PROFILE="Default"
+	fi
+}
+
+sith # call the above sith function
+
 # enable/disable custom DNS configuration
 dns() {
 	case ${1} in
