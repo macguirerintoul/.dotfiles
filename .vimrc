@@ -7,13 +7,23 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " intellisense for vim
 Plug 'preservim/nerdtree' " file explorer
 Plug 'jiangmiao/auto-pairs' " automatically insert matching characters
 Plug 'dense-analysis/ale' " linter and fixer
-Plug 'bluz71/vim-nightfly-guicolors' " color scheme
+Plug 'haishanh/night-owl.vim' " night owl scheme
+Plug 'macguirerintoul/night_owl_light.vim' " my Night Owl Light scheme
 call plug#end()
 
 " Setup color scheme
+if (has("termguicolors"))
+ set termguicolors
+endif 
 syntax enable
-set termguicolors
-colorscheme night_owl_light
+
+" set vim colorscheme based on system theme
+if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+	colorscheme night-owl
+else
+	" colorscheme night_owl_light
+	source ~/dev/night_owl_light.vim/colors/night_owl_light.vim
+endif
 
 " Configure coc
 set updatetime=300 " make it happen faster
