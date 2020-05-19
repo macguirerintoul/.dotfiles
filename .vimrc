@@ -42,6 +42,7 @@ let g:ale_lint_on_insert_leave = 0
 " vim configuration
 set backspace=indent,eol,start " allows deletion of stuff in insert mode
 set tabstop=2 " set display width of a tab (in spaces)
+set shiftwidth=2 " size of an indent
 set cursorline " highlight the line where the cursor is
 set wildmenu " autocompletion for vim commands
 set showmatch " highlight matching [{()}]
