@@ -119,7 +119,7 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 
 # antigen setup
 antigen use oh-my-zsh
-antigen theme robbyrussell
+antigen theme eendroroy/nothing nothing
 antigen bundle z
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
