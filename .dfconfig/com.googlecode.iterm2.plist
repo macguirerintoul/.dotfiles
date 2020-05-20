@@ -585,13 +585,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.96470588445663452</real>
+				<real>0.98431372549999996</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.96470588445663452</real>
+				<real>0.98431372549999996</real>
 				<key>Red Component</key>
-				<real>0.96470588445663452</real>
+				<real>0.98431372549999996</real>
 			</dict>
 			<key>Badge Color</key>
 			<dict>
@@ -1129,7 +1129,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>586 546 620 392 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>896 0 896 1120 0 0 1792 1120 </string>
+	<string>65 160 650 592 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1792 44 954 1076 1792 40 1920 1080 </string>
 	<key>New Bookmarks</key>
@@ -1356,13 +1356,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.96470588445663452</real>
+				<real>0.98431372549999996</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.96470588445663452</real>
+				<real>0.98431372549999996</real>
 				<key>Red Component</key>
-				<real>0.96470588445663452</real>
+				<real>0.98431372549999996</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1480,6 +1480,8 @@
 			</dict>
 			<key>Guid</key>
 			<string>B44B0094-5A67-4B88-8699-5CD3E8CF6EF5</string>
+			<key>Hide After Opening</key>
+			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Idle Code</key>
@@ -2656,12 +2658,12 @@
 		<key>screenFrame</key>
 		<string>{{0, 0}, {1792, 1120}}</string>
 		<key>topLeft</key>
-		<string>{796, 1020}</string>
+		<string>{388, 944}</string>
 	</dict>
 	<key>NoSyncInstallationId</key>
 	<string>C8B61993-8F12-4C40-8D0B-2BEBA3417B09</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>134</integer>
+	<integer>139</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3456,15 +3458,19 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-05-18T23:12:32Z</date>
+	<date>2020-05-19T23:12:33Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
 	<false/>
+	<key>SmartPlacement</key>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>StatusBarPosition</key>
+	<integer>1</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>TabsHaveCloseButton</key>
