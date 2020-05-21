@@ -12,6 +12,11 @@ brew cask install iterm2
 brew cask install spotify
 brew cask install macs-fan-control
 
+# enable homebrew to install fonts
+brew tap homebrew/cask-fonts
+brew cask install font-iosevka
+brew cask install font-jetbrains-mono
+
 # setup iTerm to support italics
 tic .dfconfig/xterm-256color-italic.terminfo
 
