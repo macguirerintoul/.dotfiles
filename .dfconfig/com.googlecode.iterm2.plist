@@ -12,8 +12,6 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
-	<key>CGFontRenderingFontSmoothingDisabled</key>
-	<false/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Night Owl</key>
@@ -1129,7 +1127,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>586 546 620 392 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 896 1120 0 0 1792 1120 </string>
+	<string>0 328 810 792 0 0 1792 1120 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1792 44 954 1076 1792 40 1920 1080 </string>
 	<key>New Bookmarks</key>
@@ -1923,7 +1921,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color-italic</string>
 			<key>Thin Strokes</key>
-			<integer>4</integer>
+			<integer>0</integer>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
@@ -2730,7 +2728,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>C8B61993-8F12-4C40-8D0B-2BEBA3417B09</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>143</integer>
+	<integer>147</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>

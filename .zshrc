@@ -119,9 +119,10 @@ source $(brew --prefix)/share/antigen/antigen.zsh
 
 # antigen setup
 antigen use oh-my-zsh
-antigen theme jackharrisonsherlock/common
-antigen bundle z
+antigen bundle rupa/z
 antigen bundle MichaelAquilina/zsh-you-should-use
+antigen bundle zsh-users/zsh-autosuggestions
+antigen theme jackharrisonsherlock/common
 antigen apply
 
 # Load nvm
