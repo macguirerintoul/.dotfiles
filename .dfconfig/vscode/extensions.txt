@@ -1,4 +1,3 @@
-CoenraadS.bracket-pair-colorizer-2
 kumar-harsh.graphql-for-vscode
 lunarlimbo.banner-comments-plus
 octref.vetur
@@ -6,3 +5,4 @@ redhat.vscode-yaml
 sdras.night-owl
 teabyii.ayu
 VisualStudioExptTeam.vscodeintellicode
+wavebeem.theme-unoduetre

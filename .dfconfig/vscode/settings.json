@@ -1,5 +1,4 @@
 {
-  "workbench.colorTheme": "Night Owl Light",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "editor.fontSize": 17,
@@ -14,9 +13,8 @@
   "prettier.requireConfig": true,
   "vetur.format.defaultFormatter.html": "prettier",
   "vetur.format.enable": false,
-  "editor.formatOnSave": true,
   "workbench.preferredDarkColorTheme": "Night Owl",
-  "workbench.preferredLightColorTheme": "Night Owl Light",
+  "workbench.preferredLightColorTheme": "Uno Due Tre",
   "editor.minimap.renderCharacters": false,
   "workbench.activityBar.visible": false,
   "markdown.preview.scrollPreviewWithEditor": false,
@@ -41,5 +39,9 @@
   "editor.cursorStyle": "block",
   "editor.cursorBlinking": "smooth",
   "editor.letterSpacing": 0,
-  "workbench.fontAliasing": "auto",
+  "workbench.iconTheme": "ayu",
+  "editor.highlightActiveIndentGuide": false,
+  "editor.renderIndentGuides": false,
+  "editor.matchBrackets": "never",
+  "workbench.colorTheme": "Uno Due Tre",
 }
