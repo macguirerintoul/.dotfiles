@@ -1,8 +1,9 @@
 env:
   TERM: xterm-256color
 font:
-  size: 16
+  size: 18
   normal:
-    family: JetBrains Mono
+    family: Fantasque Sans Mono
+  style: Regular
 cursor:
   unfocused_hollow: true

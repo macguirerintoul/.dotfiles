@@ -1,15 +1,15 @@
 {
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "editor.fontSize": 17,
+  "editor.fontSize": 20,
   "editor.glyphMargin": false,
   "editor.tabSize": 2,
   "workbench.startupEditor": "newUntitledFile",
   "terminal.integrated.lineHeight": 1.2,
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 16,
   "terminal.integrated.cursorStyle": "line",
   "eslint.run": "onSave",
-  "editor.fontFamily": "JetBrains Mono, Iosevka, monospace",
+  "editor.fontFamily": "Fantasque Sans Mono, monospace",
   "prettier.requireConfig": true,
   "vetur.format.defaultFormatter.html": "prettier",
   "vetur.format.enable": false,
@@ -25,7 +25,7 @@
     "page-query": "graphql",
     "static-query": "graphql"
   },
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Alacritty.app",
   "workbench.statusBar.visible": false,
   "editor.fontLigatures": true,
   "breadcrumbs.filePath": "off",
@@ -44,4 +44,5 @@
   "editor.renderIndentGuides": false,
   "editor.matchBrackets": "never",
   "workbench.colorTheme": "Uno Due Tre",
+  "editor.detectIndentation": false,
 }
