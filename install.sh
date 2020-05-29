@@ -15,6 +15,7 @@ brew cask install firefox
 brew cask install google-chrome 
 brew cask install flux
 brew cask install macs-fan-control
+brew cask install rocket
 
 # get fonts from brew
 brew tap homebrew/cask-fonts
