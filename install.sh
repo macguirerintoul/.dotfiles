@@ -1,22 +1,30 @@
 # install homebrew, macOS package manager
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# install antigen, a zsh manager
+# install brew packages
 brew install antigen
+brew install vim
+brew install alacritty
+brew install pass
+brew install spotifyd
+brew install Rigellute/tap/spotify-tui
 
 # install apps via cask
 brew cask install visual-studio-code
 brew cask install firefox
+brew cask install google-chrome 
 brew cask install flux
-brew cask install iterm2
-brew cask install spotify
 brew cask install macs-fan-control
 
-# enable homebrew to install fonts
+# get fonts from brew
 brew tap homebrew/cask-fonts
 brew cask install font-iosevka
-brew cask install font-jetbrains-mono
+brew cask install font-fantasque-sans-mono
+brew cask install font-ibm-plex
 
-# setup iTerm to support italics
+# create a terminal config to allow italic text
 tic .dfconfig/xterm-256color-italic.terminfo
+
+# clone pass repo
+git clone https://github.com/macguirerintoul/.password-store.git
 
