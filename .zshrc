@@ -4,6 +4,8 @@ alias gp='git push'
 alias python='python3'
 alias zrc='vi ~/.zshrc'
 alias vrc='vi ~/.vimrc'
+alias alc="vi ~/.alacritty.yml"
+alias tmc="vi ~/.tmux.conf"
 
 # renew upass automatically using @Armour's repo
 upass() {
