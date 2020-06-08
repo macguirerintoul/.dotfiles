@@ -11,6 +11,7 @@ Plug 'macguirerintoul/night_owl_light.vim' " my Night Owl Light scheme
 Plug 'itchyny/lightline.vim' " light status line
 Plug 'edkolev/tmuxline.vim' " tmux status line
 Plug 'junegunn/goyo.vim' " distraction-free writing
+Plug 'junegunn/limelight.vim' " dim inactive text blocks
 Plug 'godlygeek/tabular' " auto-align tables in markdown
 Plug 'plasticboy/vim-markdown' " better markdown experience
 call plug#end()
@@ -35,6 +36,10 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " make <cr> select the first completion item and confirm the completion when no item has been selected
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+" Configure limelight
+autocmd! User GoyoEnter Limelight " enter limelight with goyo
+autocmd! User GoyoLeave Limelight! " leave limelight with goyo
 
 " Configure NERDTree
 let NERDTreeShowHidden=1
