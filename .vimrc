@@ -5,39 +5,45 @@ Plug '/usr/local/opt/fzf' " fuzzy finder (installed by brew)
 Plug 'junegunn/fzf.vim' " fzf vim plugin 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " intellisense for vim
 Plug 'preservim/nerdtree' " file explorer
-Plug 'jiangmiao/auto-pairs' " automatically insert matching characters
-Plug 'dense-analysis/ale' " linter and fixer
+Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'haishanh/night-owl.vim' " night owl scheme
 Plug 'macguirerintoul/night_owl_light.vim' " my Night Owl Light scheme
+Plug 'itchyny/lightline.vim' " light status line
+Plug 'edkolev/tmuxline.vim' " tmux status line
+Plug 'junegunn/goyo.vim' " distraction-free writing
+Plug 'godlygeek/tabular' " auto-align tables in markdown
+Plug 'plasticboy/vim-markdown' " better markdown experience
 call plug#end()
 
 " Setup color scheme
 if (has("termguicolors"))
- set termguicolors
+	set termguicolors
 endif 
-syntax enable
+let g:lightline = { 'colorscheme': 'nightfly' }
 
 " set vim colorscheme based on system theme
 if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-	colorscheme night-owl
+	colorscheme nightfly
 else
-	" colorscheme night_owl_light
-	source ~/dev/night_owl_light.vim/colors/night_owl_light.vim
+	colorscheme nightfly
 endif
 
 " Configure coc
 set updatetime=300 " make it happen faster
+" Use <Tab> and <S-Tab> to navigation completion options
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" make <cr> select the first completion item and confirm the completion when no item has been selected
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
 " Configure NERDTree
 let NERDTreeShowHidden=1
 
-" Configure ALE
-let g:ale_linter_aliases = {'vue': ['vue', 'javascript']}
-let g:ale_linters = {'vue': ['eslint', 'vls']}
-let g:ale_fixers = {'javascript': ['eslint'], 'scss': ['stylelint']}
-let g:ale_fix_on_save = 1
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_insert_leave = 0
+" Configure vim-markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 2
+let g:vim_markdown_conceal_code_blocks = 0
+let g:vim_markdown_strikethrough = 1
 
 " vim configuration
 set backspace=indent,eol,start " allows deletion of stuff in insert mode
@@ -50,10 +56,19 @@ set number relativenumber " turn on both line numbers and relative line numbers
 set lazyredraw " redraw the screen less frequently
 set incsearch " search as characters are entered
 set hlsearch " highlight search results
+set splitbelow " split below current pane
+set splitright " split to right of current pane
+set laststatus=2
+set noshowmode " hide Vim status line in favour of lightline
+set nobackup " disable swap files
+set breakindent " indent wrapped lines
 
 " Key mapping
 " Ctrl + n toggles NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+" Ctrl + g toggles Goyo
+map <C-g> :Goyo<CR>
 
 " Ctrl + p opens fzf in git files mode
 map <C-p> :GFiles<CR>

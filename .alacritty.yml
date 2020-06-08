@@ -5,5 +5,3 @@ font:
   normal:
     family: Fantasque Sans Mono
   style: Regular
-cursor:
-  unfocused_hollow: true
