@@ -6,6 +6,7 @@ alias zrc='vi ~/.zshrc'
 alias vrc='vi ~/.vimrc'
 alias alc="vi ~/.alacritty.yml"
 alias tmc="vi ~/.tmux.conf"
+alias :q="exit"
 
 # renew upass automatically using @Armour's repo
 upass() {

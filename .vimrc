@@ -3,17 +3,17 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot' " syntax highlighting
 Plug '/usr/local/opt/fzf' " fuzzy finder (installed by brew)
 Plug 'junegunn/fzf.vim' " fzf vim plugin 
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " intellisense for vim
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " intellisense
 Plug 'preservim/nerdtree' " file explorer
-Plug 'bluz71/vim-nightfly-guicolors'
-Plug 'haishanh/night-owl.vim' " night owl scheme
-Plug 'macguirerintoul/night_owl_light.vim' " my Night Owl Light scheme
-Plug 'itchyny/lightline.vim' " light status line
-Plug 'edkolev/tmuxline.vim' " tmux status line
+Plug 'bluz71/vim-nightfly-guicolors' " dark colorscheme
+Plug 'itchyny/lightline.vim' " Vim status line
+Plug 'edkolev/tmuxline.vim' " tmux status line generator
 Plug 'junegunn/goyo.vim' " distraction-free writing
 Plug 'junegunn/limelight.vim' " dim inactive text blocks
 Plug 'godlygeek/tabular' " auto-align tables in markdown
 Plug 'plasticboy/vim-markdown' " better markdown experience
+Plug 'liuchengxu/vista.vim' " minimap with LSP support
+Plug 'mhinz/vim-startify' " fancy start screen
 call plug#end()
 
 " Setup color scheme
@@ -36,6 +36,9 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " make <cr> select the first completion item and confirm the completion when no item has been selected
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+" Configure Vista
+let g:vista_default_executive = 'coc'
 
 " Configure limelight
 autocmd! User GoyoEnter Limelight " enter limelight with goyo
