@@ -11,8 +11,8 @@ Plug 'edkolev/tmuxline.vim' " tmux status line generator
 Plug 'junegunn/goyo.vim' " distraction-free writing
 Plug 'junegunn/limelight.vim' " dim inactive text blocks
 Plug 'godlygeek/tabular' " auto-align tables in markdown
-Plug 'plasticboy/vim-markdown' " better markdown experience
-Plug 'liuchengxu/vista.vim' " minimap with LSP support
+" Plug 'plasticboy/vim-markdown' " better markdown experience
+Plug 'altercation/vim-colors-solarized' " Solarized Light color scheme
 Plug 'mhinz/vim-startify' " fancy start screen
 call plug#end()
 
@@ -26,7 +26,8 @@ let g:lightline = { 'colorscheme': 'nightfly' }
 if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
 	colorscheme nightfly
 else
-	colorscheme nightfly
+	set background=light
+	colorscheme solarized
 endif
 
 " Configure coc
@@ -37,8 +38,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " make <cr> select the first completion item and confirm the completion when no item has been selected
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
-" Configure Vista
-let g:vista_default_executive = 'coc'
+let g:csv_no_conceal = 1
 
 " Configure limelight
 autocmd! User GoyoEnter Limelight " enter limelight with goyo
@@ -60,7 +60,7 @@ set shiftwidth=2 " size of an indent
 set cursorline " highlight the line where the cursor is
 set wildmenu " autocompletion for vim commands
 set showmatch " highlight matching [{()}]
-set number relativenumber " turn on both line numbers and relative line numbers
+set number " turn on line numbers
 set lazyredraw " redraw the screen less frequently
 set incsearch " search as characters are entered
 set hlsearch " highlight search results
