@@ -1,5 +1,4 @@
 alias rl='source ~/.zshrc' # alias to reload the zsh configuration
-alias dfg='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias gp='git push'
 alias python='python3'
 alias zrc='vi ~/.zshrc'
@@ -16,10 +15,6 @@ upass() {
 # dotfiles functions
 df () {
   case ${1} in
-    i ) 
-      ./install.sh # run the dotfiles install script
-			df x # run df x (not sure if this will work)
-      ;;
     u ) 
       echo "Uploading dotfiles..."
       code --list-extensions > ~/.dfconfig/vscode/extensions.txt # export vscode extensions
@@ -32,11 +27,6 @@ df () {
 			fi
       dfg push # push
       echo "Upload complete."
-      ;;
-    d ) 
-      echo "Downloading dotfiles..."
-      dfg pull # pull dotfiles from github
-      echo "Download complete."
       ;;
     x )
       extensions=$(cat ~/.dfconfig/vscode/extensions.txt)
@@ -64,7 +54,6 @@ df () {
       dfg status
       ;;
     * )  
-      echo "i: run install script"
       echo "u: upload dotfiles"
       echo "d: download dotfiles"
       echo "x: install extensions"
@@ -109,12 +98,6 @@ dns() {
 # shortcut to add all modified files & commit
 g () {
   git add . && git commit -m "$1"
-}
-
-# compress a PDF
-compresspdf() {
-    echo 'Usage: compresspdf [input file] [output file]'
-    gs -sDEVICE=pdfwrite -dNOPAUSE -dQUIET -dBATCH -dPDFSETTINGS=/ebook -dCompatibilityLevel=1.4 -sOutputFile="$2" "$1"
 }
 
 # source antigen since I install from brew
