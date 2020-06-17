@@ -1,34 +1,46 @@
 " Plug setup
 call plug#begin()
-Plug 'sheerun/vim-polyglot' " syntax highlighting
+" Color schemes
+Plug 'lifepillar/vim-solarized8' " light colorscheme
+Plug 'bluz71/vim-nightfly-guicolors' " dark colorscheme
+" Plugins
+Plug 'sheerun/vim-polyglot' " Syntax highlighting
 Plug '/usr/local/opt/fzf' " fuzzy finder (installed by brew)
 Plug 'junegunn/fzf.vim' " fzf vim plugin 
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " intellisense
-Plug 'preservim/nerdtree' " file explorer
-Plug 'bluz71/vim-nightfly-guicolors' " dark colorscheme
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense
+Plug 'preservim/nerdtree' " File explorer
 Plug 'itchyny/lightline.vim' " Vim status line
 Plug 'edkolev/tmuxline.vim' " tmux status line generator
-Plug 'junegunn/goyo.vim' " distraction-free writing
-Plug 'junegunn/limelight.vim' " dim inactive text blocks
-Plug 'godlygeek/tabular' " auto-align tables in markdown
-" Plug 'plasticboy/vim-markdown' " better markdown experience
-Plug 'altercation/vim-colors-solarized' " Solarized Light color scheme
-Plug 'mhinz/vim-startify' " fancy start screen
+Plug 'junegunn/goyo.vim' " Distraction-free writing
+Plug 'junegunn/limelight.vim' " Dim inactive text blocks
+Plug 'godlygeek/tabular' " Align characters across lines
 call plug#end()
 
 " Setup color scheme
 if (has("termguicolors"))
 	set termguicolors
 endif 
-let g:lightline = { 'colorscheme': 'nightfly' }
 
-" set vim colorscheme based on system theme
+" Set Vim colorscheme based on system theme
 if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
+	set background=dark
 	colorscheme nightfly
+	let g:lightline = { 'colorscheme': 'nightfly' }
 else
 	set background=light
-	colorscheme solarized
+	colorscheme solarized8
+	let g:lightline = { 'colorscheme': 'solarized' }
 endif
+
+let g:tmuxline_preset = {
+      \'a'    : '#W',
+      \'b'    : '',
+      \'c'    : '',
+      \'win'  : '#I #W',
+      \'cwin' : '#I #W',
+      \'x'    : '',
+      \'y'    : '',
+      \'z'    : '%a %Y-%m-%d %H:%M'}
 
 " Configure coc
 set updatetime=300 " make it happen faster
