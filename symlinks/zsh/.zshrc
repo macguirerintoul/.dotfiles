@@ -17,7 +17,7 @@ df () {
   case ${1} in
     u ) 
       echo "Uploading dotfiles..."
-      code --list-extensions > ~/.dfconfig/vscode/extensions.txt # export vscode extensions
+      code --list-extensions > ~/.dotfiles/symlinks/vscode/.config/VSCode/extensions.txt
       dfg add -u # add changed files to commit
 			if [ -z "$2" ] # if argument 2 is an empty string...
   			then
@@ -29,7 +29,7 @@ df () {
       echo "Upload complete."
       ;;
     x )
-      extensions=$(cat ~/.dfconfig/vscode/extensions.txt)
+      extensions=$(cat ~/.config/VSCode/extensions.txt)
       installed=$(code --list-extensions)
       while read LINE
       do
@@ -48,7 +48,7 @@ df () {
           echo "$LINE is not yet installed. Installing..."
           code --install-extension $LINE 
         fi # end if
-      done < ~/.dfconfig/vscode/extensions.txt # use each line of file as input to while read loop
+      done < ~/.config/VSCode/extensions.txt # use each line of file as input to while read loop
       ;;
     status )
       dfg status
@@ -72,12 +72,12 @@ sith() {
 
 # toggle iTerm profile
 i() {
-	if [[ $ITERM_PROFILE == "Default" ]]; then
+	if [[ $ITERM_PROFILE == "Light" ]]; then
 		echo -ne "\033]50;SetProfile=Dark\a"
 		export ITERM_PROFILE="Dark"
 	else
-		echo -ne "\033]50;SetProfile=Default\a"
-		export ITERM_PROFILE="Default"
+		echo -ne "\033]50;SetProfile=Light\a"
+		export ITERM_PROFILE="Light"
 	fi
 }
 
