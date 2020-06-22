@@ -1,7 +1,7 @@
 {
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "editor.fontSize": 19,
+  "editor.fontSize": 18,
   "editor.glyphMargin": false,
   "editor.tabSize": 2,
   "workbench.startupEditor": "newUntitledFile",
@@ -9,7 +9,7 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.cursorStyle": "line",
   "eslint.run": "onSave",
-  "editor.fontFamily": "Anonymous Pro, monospace",
+  "editor.fontFamily": "\"Iosevka-extended\", monospace",
   "prettier.requireConfig": true,
   "vetur.format.defaultFormatter.html": "prettier",
   "vetur.format.enable": false,
