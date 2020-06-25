@@ -33,37 +33,29 @@ else
 endif
 
 let g:tmuxline_preset = {
-      \'a'    : '#W',
-      \'b'    : '',
-      \'c'    : '',
-      \'win'  : '#I #W',
-      \'cwin' : '#I #W',
-      \'x'    : '',
-      \'y'    : '',
-      \'z'    : '%a %Y-%m-%d %H:%M'}
+	\'a': '#W',
+	\'b': '',
+	\'c': '',
+	\'win': '#I #W',
+	\'cwin': '#I #W',
+	\'x': '',
+	\'y': '',
+	\'z': '%a %Y-%m-%d %H:%M'}
 
-" Configure coc
-set updatetime=300 " make it happen faster
+" Configure CoC
+set updatetime=300 " Make CoC more responsive
 " Use <Tab> and <S-Tab> to navigation completion options
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " make <cr> select the first completion item and confirm the completion when no item has been selected
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
 
-let g:csv_no_conceal = 1
-
 " Configure limelight
-autocmd! User GoyoEnter Limelight " enter limelight with goyo
+autocmd! User GoyoEnter Limelight " Enable limelight with goyo
 autocmd! User GoyoLeave Limelight! " leave limelight with goyo
 
 " Configure NERDTree
 let NERDTreeShowHidden=1
-
-" Configure vim-markdown
-let g:vim_markdown_folding_disabled = 1
-let g:vim_markdown_conceal = 2
-let g:vim_markdown_conceal_code_blocks = 0
-let g:vim_markdown_strikethrough = 1
 
 " vim configuration
 set backspace=indent,eol,start " allows deletion of stuff in insert mode
@@ -78,10 +70,11 @@ set incsearch " search as characters are entered
 set hlsearch " highlight search results
 set splitbelow " split below current pane
 set splitright " split to right of current pane
-set laststatus=2
+set laststatus=2 " Show status line always
 set noshowmode " hide Vim status line in favour of lightline
-set nobackup " disable swap files
-set breakindent " indent wrapped lines
+set wrap " Wrap long lines
+set linebreak " Only wrap at nice 'breakable' characters
+set breakindent " Indent wrapped lines to match current indent
 
 " Key mapping
 " Ctrl + n toggles NERDTree
