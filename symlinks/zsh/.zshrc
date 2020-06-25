@@ -5,6 +5,9 @@ alias zrc='vi ~/.zshrc'
 alias vrc='vi ~/.vimrc'
 alias alc="vi ~/.alacritty.yml"
 alias tmc="vi ~/.tmux.conf"
+alias kc="vi ~/.config/kitty/kitty.conf"
+alias bd="brew bundle dump --describe"
+alias o='open "$(fzf)"'
 alias :q="exit"
 
 # renew upass automatically using @Armour's repo
