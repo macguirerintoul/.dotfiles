@@ -90,7 +90,7 @@ sith # call the above sith function
 dns() {
 	case ${1} in
 		on )
-			networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001	
+			networksetup -setdnsservers Wi-Fi 10.0.0.100 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001	
 			;;
 		off )
 			networksetup -setdnsservers Wi-Fi 208.67.220.220 208.67.222.222
@@ -113,6 +113,8 @@ antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zsh-users/zsh-autosuggestions
 antigen theme jackharrisonsherlock/common
 antigen apply
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
 
 # Load nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
