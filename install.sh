@@ -4,8 +4,9 @@ git clone https://github.com/macguirerintoul/.dotfiles.git ~/.dotfiles
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
-# Install Zero.sh
-brew install zero-sh/tap/zero
-
-# Run Zero.sh
-zero setup
+# For every directory within this one, run stow on it
+# This creates a symlink in ~ to the contents of the directory
+# e.g. ./vim/.vimrc -> ~/.vimrc
+for dir in */; do
+	stow "$dir"
+done
