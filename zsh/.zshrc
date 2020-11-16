@@ -6,8 +6,9 @@ alias vrc='vi ~/.vimrc'
 alias alc="vi ~/.alacritty.yml"
 alias tmc="vi ~/.tmux.conf"
 alias kc="vi ~/.config/kitty/kitty.conf"
-alias bd="brew bundle dump --describe"
-alias o='open "$(fzf)"'
+alias bd="brew bundle dump --describe" # Generate a Brewfile
+alias o='open "$(fzf)"' # Shortcut to open a file found via fzf
+alias dsd='find . -name ".DS_Store" -delete' # Delete all .DS_Store files in current and subdirectories
 alias :q="exit"
 
 # renew upass automatically using @Armour's repo
@@ -65,6 +66,16 @@ df () {
   esac
 }
 
+
+mon() {
+	val=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
+	if [[ $val == "Dark" ]]; then
+		ytop
+	else
+		ytop -c default-dark
+	fi
+}
+
 # switch iTerm profile with system theme
 sith() {
 	val=$(defaults read -g AppleInterfaceStyle 2>/dev/null)
@@ -90,7 +101,7 @@ sith # call the above sith function
 dns() {
 	case ${1} in
 		on )
-			networksetup -setdnsservers Wi-Fi 10.0.0.100 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001	
+			networksetup -setdnsservers Wi-Fi 10.0.0.99 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001	
 			;;
 		off )
 			networksetup -setdnsservers Wi-Fi 208.67.220.220 208.67.222.222
@@ -112,9 +123,10 @@ antigen bundle rupa/z
 antigen bundle MichaelAquilina/zsh-you-should-use
 antigen bundle zsh-users/zsh-autosuggestions
 antigen theme jackharrisonsherlock/common
+antigen bundle subnixr/minimal
 antigen apply
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11"
 
 # Load nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -125,3 +137,6 @@ eval $(thefuck --alias)
 
 # setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# rbenv
+eval "$(rbenv init -)"
