@@ -1,4 +1,4 @@
-packages=( zsh stow )
+packages=( zsh stow tmux )
 for package in "${packages[@]}"
 if ! command -v $package &> /dev/null
 then

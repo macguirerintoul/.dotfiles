@@ -114,10 +114,8 @@ g () {
   git add . && git commit -m "$1"
 }
 
-# source antigen since I install from brew
-source $(brew --prefix)/share/antigen/antigen.zsh
-
-# antigen setup
+# Antigen
+source ~/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle rupa/z
 antigen bundle MichaelAquilina/zsh-you-should-use
@@ -125,8 +123,6 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen theme jackharrisonsherlock/common
 antigen bundle subnixr/minimal
 antigen apply
-
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=11"
 
 # Load nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -138,5 +134,8 @@ eval $(thefuck --alias)
 # setup fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# rbenv
-eval "$(rbenv init -)"
+# If we're on macOS
+if [[ `uname` == "Darwin" ]]; then
+	# rbenv
+	eval "$(rbenv init -)"
+fi
