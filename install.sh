@@ -7,7 +7,7 @@ if [ -d "~/.dotfiles" ]; then
 fi
 
 # Check what OS we're on for later
-if command -v apt &> /dev/null; then
+if type apt &> /dev/null; then
 	# We're on Linux 😎
 	OS=Linux
 elif [[ `uname` == "Darwin" ]]; then
@@ -18,20 +18,21 @@ else
 fi
 
 # Get stow if we don't have it
-if command -v stow &> /dev/null; then
-	if $OS == 'Linux'; then
-		apt install stow
-	elif $OS == 'macOS'; then
+if ! type stow &> /dev/null; then
+	if [[ $OS == 'Linux' ]]; then
+		sudo apt install stow
+	elif [[ $OS == 'macOS' ]]; then
 		# Note sure if macOS comes with stow or not, but let's get it anyways.
 		# Source .zshrc if it exists;
-		# We can't know if brew is installed until we run the 'eval' thing for brew that you have to put in .zshrc
-		if [ -f "~/.zshrc" ]; then
-			source ~/.zshrc
+		# We can't know if brew is installed until we run the 'eval' thing for brew that you have to put in .zprofile
+		if [ -f "~/.zprofile" ]; then
+			source ~/.zprofile
 		fi
 		# If brew isn't installed, get it
 		if ! type brew > /dev/null; then
 			/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 		fi
+		eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 		# Then, get stow!
 		brew install stow
 	fi
@@ -45,8 +46,9 @@ for dir in */; do
 	stow "$dir" -t ~ -v
 done
 
-# Now, .zshrc is where it's supposed to be and we can source it (on Linux, we haven't yet)
+# Now, zsh stuff is where it's supposed to be and we can source it (on Linux, we haven't yet)
 source ~/.zshrc
+source ~/.zprofile
 
 # If brew isn't installed, get it (on Linux, we haven't yet)
 if ! type brew > /dev/null; then
@@ -55,10 +57,10 @@ fi
 
 # Run OS-specific scripts
 # and go to the directory where each OS' Brewfile is
-if $OS == 'Linux'; then
+if [[ $OS == 'Linux' ]]; then
 	source $DOTDIR/linux/linux.sh
 	cd $DOTDIR/linux 
-elif $OS == macOS; then
+elif [[ $OS == macOS ]]; then
 	source $DOTDIR/macos.sh
 	cd $DOTDIR/macos
 fi
