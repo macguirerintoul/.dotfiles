@@ -44,5 +44,5 @@
   "editor.renderIndentGuides": false,
   "editor.matchBrackets": "never",
   "editor.detectIndentation": false,
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Solarized Dark",
 }
