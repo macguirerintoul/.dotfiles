@@ -3,6 +3,7 @@ call plug#begin()
 " Color schemes
 Plug 'lifepillar/vim-solarized8' " light colorscheme
 Plug 'bluz71/vim-nightfly-guicolors' " dark colorscheme
+Plug 'morhetz/gruvbox' " gruvbox
 " Plugins
 Plug 'sheerun/vim-polyglot' " Syntax highlighting
 Plug '/usr/local/opt/fzf' " fuzzy finder (installed by brew)
@@ -14,6 +15,8 @@ Plug 'edkolev/tmuxline.vim' " tmux status line generator
 Plug 'junegunn/goyo.vim' " Distraction-free writing
 Plug 'junegunn/limelight.vim' " Dim inactive text blocks
 Plug 'godlygeek/tabular' " Align characters across lines
+Plug 'preservim/nerdcommenter' " Easy-comment plugin
+Plug 'chrisbra/Colorizer' " Visualize colors in Vim
 call plug#end()
 
 " Setup color scheme
@@ -28,7 +31,7 @@ if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
 	let g:lightline = { 'colorscheme': 'nightfly' }
 else
 	set background=light
-	colorscheme solarized8
+	colorscheme gruvbox
 	let g:lightline = { 'colorscheme': 'solarized' }
 endif
 
