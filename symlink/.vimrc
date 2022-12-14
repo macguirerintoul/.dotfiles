@@ -1,20 +1,15 @@
 " Plug setup
 call plug#begin()
 " Color schemes
-Plug 'lifepillar/vim-solarized8' " light colorscheme
-Plug 'bluz71/vim-nightfly-guicolors' " dark colorscheme
-Plug 'morhetz/gruvbox' " gruvbox
+Plug 'bluz71/vim-nightfly-colors'
 " Plugins
 Plug 'sheerun/vim-polyglot' " Syntax highlighting
 Plug '/usr/local/opt/fzf' " fuzzy finder (installed by brew)
 Plug 'junegunn/fzf.vim' " fzf vim plugin 
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " Intellisense
 Plug 'preservim/nerdtree' " File explorer
 Plug 'itchyny/lightline.vim' " Vim status line
-Plug 'edkolev/tmuxline.vim' " tmux status line generator
 Plug 'junegunn/goyo.vim' " Distraction-free writing
 Plug 'junegunn/limelight.vim' " Dim inactive text blocks
-Plug 'godlygeek/tabular' " Align characters across lines
 Plug 'preservim/nerdcommenter' " Easy-comment plugin
 Plug 'chrisbra/Colorizer' " Visualize colors in Vim
 call plug#end()
@@ -23,35 +18,7 @@ call plug#end()
 if (has("termguicolors"))
 	set termguicolors
 endif 
-
-" Set Vim colorscheme based on system theme
-if system("defaults read -g AppleInterfaceStyle") =~ '^Dark'
-	set background=dark
-	colorscheme nightfly
-	let g:lightline = { 'colorscheme': 'nightfly' }
-else
-	set background=light
-	colorscheme gruvbox
-	let g:lightline = { 'colorscheme': 'solarized' }
-endif
-
-let g:tmuxline_preset = {
-	\'a': '#W',
-	\'b': '',
-	\'c': '',
-	\'win': '#I #W',
-	\'cwin': '#I #W',
-	\'x': '',
-	\'y': '',
-	\'z': '%a %Y-%m-%d %H:%M'}
-
-" Configure CoC
-set updatetime=300 " Make CoC more responsive
-" Use <Tab> and <S-Tab> to navigation completion options
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" make <cr> select the first completion item and confirm the completion when no item has been selected
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+colorscheme nightfly
 
 " Configure limelight
 autocmd! User GoyoEnter Limelight " Enable limelight with goyo

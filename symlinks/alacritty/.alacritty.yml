@@ -1,8 +1,0 @@
-env:
-  TERM: xterm-256color
-font:
-  size: 18
-  normal:
-    family: Iosevka Fixed Extended
-  style: Regular
-  use_thin_strokes: true
