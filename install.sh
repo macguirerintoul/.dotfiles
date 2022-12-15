@@ -49,6 +49,10 @@ if [[ $OS == 'macOS' ]]; then
 	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 	[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 	nvm install --lts
+
+	# iTerm2
+	defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles/.iterm"
+	defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 elif [[ $OS == 'Ubuntu' ]]; then
 	if ! type stow &> /dev/null; then
 		sudo apt install stow
