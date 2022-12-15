@@ -30,13 +30,13 @@ if [[ $OS == 'macOS' ]]; then
 	brew tap zegervdv/zathura
 
 	# Formulae
-	brew install ffmpegthumbnailer libreoffice nnn stow tmux vim viu zathura zathura-pdf-poppler zplug zsh
+	brew install ffmpegthumbnailer nnn stow tmux vim viu zathura zathura-pdf-poppler zplug zsh
 	sh -c "$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/plugins/getplugs)"
 	mkdir -p $(brew --prefix zathura)/lib/zathura
 	ln -s $(brew --prefix zathura-pdf-poppler)/libpdf-poppler.dylib $(brew --prefix zathura)/lib/zathura/libpdf-poppler.dylib
 
 	# Casks
-	for cask in flux font-cozette google-chrome iterm2 macs-fan-control monitorcontrol visual-studio-code
+	for cask in flux font-cozette google-chrome iterm2 libreoffice macs-fan-control monitorcontrol visual-studio-code
 	do
 		if ! brew info $cask &>/dev/null; then
 			brew install --cask $cask
