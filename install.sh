@@ -8,7 +8,7 @@ fi
 
 # Check what OS we're on for later
 if [ -n "$(uname -a | grep Ubuntu)" ]; then
-	OS=ubuntu
+	OS=Ubuntu
 elif [ -n "$(uname -a | grep Darwin)" ]; then
 	OS=macOS
 else
