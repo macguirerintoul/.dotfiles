@@ -18,7 +18,10 @@ call plug#end()
 if (has("termguicolors"))
 	set termguicolors
 endif 
-colorscheme nightfly
+try
+	colorscheme nightfly
+	catch
+endtry
 
 " Configure limelight
 autocmd! User GoyoEnter Limelight " Enable limelight with goyo
