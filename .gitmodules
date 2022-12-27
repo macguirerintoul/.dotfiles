@@ -1,0 +1,3 @@
+[submodule "home/.zsh_plugins/zsh-z"]
+	path = home/.zsh_plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z.git
