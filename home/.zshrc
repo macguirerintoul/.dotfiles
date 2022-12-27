@@ -1,6 +1,6 @@
 export ZPLUG_HOME=~/.zplug
 source $ZPLUG_HOME/init.zsh
-zplug "agkozak/zsh-z"
+source .zsh_plugins/zsh-z/zsh-z.plugin.zsh
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "themes/robbyrussell", from:oh-my-zsh, as:theme
