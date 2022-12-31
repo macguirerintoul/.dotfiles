@@ -10,3 +10,6 @@
 [submodule "home/.zsh_plugins/common"]
 	path = home/.zsh_plugins/common
 	url = https://github.com/jackharrisonsherlock/common
+[submodule "home/.zsh_plugins/minimal"]
+	path = home/.zsh_plugins/minimal
+	url = https://github.com/subnixr/minimal
