@@ -13,3 +13,15 @@
 [submodule "home/.zsh_plugins/minimal"]
 	path = home/.zsh_plugins/minimal
 	url = https://github.com/subnixr/minimal
+[submodule "home/.vim/pack/plugins/start/nerdtree"]
+	path = home/.vim/pack/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "home/.vim/pack/plugins/start/lightline.vim"]
+	path = home/.vim/pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "home/.vim/pack/plugins/start/vim-polyglot"]
+	path = home/.vim/pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "home/.vim/pack/plugins/start/spaceduck"]
+	path = home/.vim/pack/plugins/start/spaceduck
+	url = https://github.com/pineapplegiant/spaceduck
