@@ -1,31 +1,11 @@
-" Plug setup
-call plug#begin()
-" Color schemes
-Plug 'bluz71/vim-nightfly-colors'
-" Plugins
-Plug 'sheerun/vim-polyglot' " Syntax highlighting
-Plug '/usr/local/opt/fzf' " fuzzy finder (installed by brew)
-Plug 'junegunn/fzf.vim' " fzf vim plugin 
-Plug 'preservim/nerdtree' " File explorer
-Plug 'itchyny/lightline.vim' " Vim status line
-Plug 'junegunn/goyo.vim' " Distraction-free writing
-Plug 'junegunn/limelight.vim' " Dim inactive text blocks
-Plug 'preservim/nerdcommenter' " Easy-comment plugin
-Plug 'chrisbra/Colorizer' " Visualize colors in Vim
-call plug#end()
-
 " Setup color scheme
 if (has("termguicolors"))
 	set termguicolors
 endif 
 try
-	colorscheme nightfly
+	colorscheme spaceduck
 	catch
 endtry
-
-" Configure limelight
-autocmd! User GoyoEnter Limelight " Enable limelight with goyo
-autocmd! User GoyoLeave Limelight! " leave limelight with goyo
 
 " Configure NERDTree
 let NERDTreeShowHidden=1
@@ -53,15 +33,13 @@ set breakindent " Indent wrapped lines to match current indent
 " Ctrl + n toggles NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-" Ctrl + g toggles Goyo
-map <C-g> :Goyo<CR>
-
-" Ctrl + p opens fzf in git files mode
-map <C-p> :GFiles<CR>
-
 " \ + <space> turns off highlight from previous search
 nnoremap <leader><space> :nohlsearch<CR>
 
 " move vertically by visual line
 nnoremap j gj
 nnoremap k gk
+
+let g:lightline = {
+          \ 'colorscheme': 'spaceduck',
+          \ }
