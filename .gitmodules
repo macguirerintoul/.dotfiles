@@ -25,3 +25,12 @@
 [submodule "home/.vim/pack/plugins/start/spaceduck"]
 	path = home/.vim/pack/plugins/start/spaceduck
 	url = https://github.com/pineapplegiant/spaceduck
+[submodule "home/.vim/pack/plugins/start/vim-fahrenheit"]
+	path = home/.vim/pack/plugins/start/vim-fahrenheit
+	url = https://github.com/fcpg/vim-fahrenheit
+[submodule "home/.vim/pack/plugins/start/vim-moonfly-colors"]
+	path = home/.vim/pack/plugins/start/vim-moonfly-colors
+	url = https://github.com/bluz71/vim-moonfly-colors
+[submodule "home/.zsh_plugins/typewritten"]
+	path = home/.zsh_plugins/typewritten
+	url = https://github.com/reobin/typewritten
