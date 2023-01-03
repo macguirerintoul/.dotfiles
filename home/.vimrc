@@ -3,7 +3,7 @@ if (has("termguicolors"))
 	set termguicolors
 endif 
 try
-	colorscheme spaceduck
+	colorscheme moonfly
 	catch
 endtry
 
@@ -14,7 +14,7 @@ let NERDTreeShowHidden=1
 set backspace=indent,eol,start " allows deletion of stuff in insert mode
 set tabstop=2 " set display width of a tab (in spaces)
 set shiftwidth=2 " size of an indent
-set cursorline " highlight the line where the cursor is
+"set cursorline " highlight the line where the cursor is
 set wildmenu " autocompletion for vim commands
 set showmatch " highlight matching [{()}]
 set number " turn on line numbers
@@ -40,6 +40,4 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 
-let g:lightline = {
-          \ 'colorscheme': 'spaceduck',
-          \ }
+let g:lightline = { 'colorscheme': 'moonfly' }

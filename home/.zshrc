@@ -1,6 +1,7 @@
 source ~/.zsh_plugins/zsh-z/zsh-z.plugin.zsh
 source ~/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+MNML_USER_CHAR='$'
 source ~/.zsh_plugins/minimal/minimal.zsh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
