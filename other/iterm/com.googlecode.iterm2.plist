@@ -8,6 +8,8 @@
 	<integer>0</integer>
 	<key>BadgeTopMargin</key>
 	<integer>0</integer>
+	<key>ColoredSelectedTabOutlineStrength</key>
+	<real>0.10000000149011612</real>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Belafonte Day</key>
@@ -2508,7 +2510,7 @@
 	<key>DisableFullscreenTransparency</key>
 	<false/>
 	<key>DisableWindowSizeSnap</key>
-	<true/>
+	<false/>
 	<key>EnableAPIServer</key>
 	<true/>
 	<key>EnableDivisionView</key>
@@ -3414,9 +3416,9 @@
 	<key>TabsHaveCloseButton</key>
 	<false/>
 	<key>TerminalMargin</key>
-	<integer>0</integer>
+	<integer>8</integer>
 	<key>TerminalVMargin</key>
-	<integer>0</integer>
+	<integer>8</integer>
 	<key>TmuxUsesDedicatedProfile</key>
 	<false/>
 	<key>ToolbeltTools</key>

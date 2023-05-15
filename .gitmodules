@@ -7,9 +7,6 @@
 [submodule "home/.zsh_plugins/zsh-syntax-highlighting"]
 	path = home/.zsh_plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "home/.zsh_plugins/common"]
-	path = home/.zsh_plugins/common
-	url = https://github.com/jackharrisonsherlock/common
 [submodule "home/.zsh_plugins/minimal"]
 	path = home/.zsh_plugins/minimal
 	url = https://github.com/subnixr/minimal
@@ -31,6 +28,3 @@
 [submodule "home/.vim/pack/plugins/start/vim-moonfly-colors"]
 	path = home/.vim/pack/plugins/start/vim-moonfly-colors
 	url = https://github.com/bluz71/vim-moonfly-colors
-[submodule "home/.zsh_plugins/typewritten"]
-	path = home/.zsh_plugins/typewritten
-	url = https://github.com/reobin/typewritten
