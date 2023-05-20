@@ -1,6 +1,9 @@
 source ~/.zsh_plugins/zsh-z/zsh-z.plugin.zsh
 source ~/.zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+bindkey '`' autosuggest-accept
+bindkey '`^M' autosuggest-execute
 MNML_PROMPT=(mnml_status)
 source ~/.zsh_plugins/minimal/minimal.zsh
 . "$HOME/.asdf/asdf.sh"
