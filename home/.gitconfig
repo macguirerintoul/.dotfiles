@@ -5,3 +5,5 @@
 	excludesfile = /Users/macguire.rintoul/.gitignore_global
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
