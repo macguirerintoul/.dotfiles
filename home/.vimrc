@@ -3,7 +3,7 @@ if (has("termguicolors"))
 	set termguicolors
 endif 
 try
-	colorscheme moonfly
+	colorscheme github_light
 	catch
 endtry
 
@@ -40,4 +40,4 @@ nnoremap <leader><space> :nohlsearch<CR>
 nnoremap j gj
 nnoremap k gk
 
-let g:lightline = { 'colorscheme': 'moonfly' }
+let g:lightline = { 'colorscheme': 'github_light' }

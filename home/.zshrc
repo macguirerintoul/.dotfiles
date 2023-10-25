@@ -11,3 +11,7 @@ source ~/.zsh_plugins/minimal/minimal.zsh
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+
+
+# Loads oh-my-visier's entrypoint
+source ~/oh_my_visier/entrypoint.sh
