@@ -28,3 +28,6 @@
 [submodule "home/.vim/pack/plugins/start/vim-moonfly-colors"]
 	path = home/.vim/pack/plugins/start/vim-moonfly-colors
 	url = https://github.com/bluz71/vim-moonfly-colors
+[submodule "home/.vim/pack/plugins/start/github-light.vim"]
+	path = home/.vim/pack/plugins/start/github-light.vim
+	url = git@github.com:romgrk/github-light.vim.git
