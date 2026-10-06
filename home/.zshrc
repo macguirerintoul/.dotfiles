@@ -13,14 +13,16 @@ fpath=(${ASDF_DIR}/completions $fpath)
 autoload -Uz compinit && compinit
 
 
-# Loads oh-my-visier's entrypoint
-source ~/oh_my_visier/entrypoint.sh
+if [[ -d ~/oh_my_visier ]]; then
+  # Loads oh-my-visier's entrypoint
+  source ~/oh_my_visier/entrypoint.sh
 
-#export NODE_EXTRA_CA_CERTS=/etc/ssl/certs/offline-ca001.yvr.default.dc.visier.network.pem 
+  #export NODE_EXTRA_CA_CERTS=/etc/ssl/certs/offline-ca001.yvr.default.dc.visier.network.pem
 
 
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+  # Load Angular CLI autocompletion.
+  source <(ng completion script)
+  export PYENV_ROOT="$HOME/.pyenv"
+  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi

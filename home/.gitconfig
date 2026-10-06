@@ -1,9 +1,0 @@
-[user]
-	name = Macguire Rintoul
-	email = git@macguire.me
-[core]
-	excludesfile = /Users/macguire.rintoul/.gitignore_global
-[init]
-	defaultBranch = main
-[push]
-	autoSetupRemote = true
