@@ -1,0 +1,33 @@
+[submodule "home/.zsh_plugins/zsh-z"]
+	path = home/.zsh_plugins/zsh-z
+	url = https://github.com/agkozak/zsh-z.git
+[submodule "home/.zsh_plugins/zsh-autosuggestions"]
+	path = home/.zsh_plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "home/.zsh_plugins/zsh-syntax-highlighting"]
+	path = home/.zsh_plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "home/.zsh_plugins/minimal"]
+	path = home/.zsh_plugins/minimal
+	url = https://github.com/subnixr/minimal
+[submodule "home/.vim/pack/plugins/start/nerdtree"]
+	path = home/.vim/pack/plugins/start/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "home/.vim/pack/plugins/start/lightline.vim"]
+	path = home/.vim/pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
+[submodule "home/.vim/pack/plugins/start/vim-polyglot"]
+	path = home/.vim/pack/plugins/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
+[submodule "home/.vim/pack/plugins/start/spaceduck"]
+	path = home/.vim/pack/plugins/start/spaceduck
+	url = https://github.com/pineapplegiant/spaceduck
+[submodule "home/.vim/pack/plugins/start/vim-fahrenheit"]
+	path = home/.vim/pack/plugins/start/vim-fahrenheit
+	url = https://github.com/fcpg/vim-fahrenheit
+[submodule "home/.vim/pack/plugins/start/vim-moonfly-colors"]
+	path = home/.vim/pack/plugins/start/vim-moonfly-colors
+	url = https://github.com/bluz71/vim-moonfly-colors
+[submodule "home/.vim/pack/plugins/start/github-light.vim"]
+	path = home/.vim/pack/plugins/start/github-light.vim
+	url = git@github.com:romgrk/github-light.vim.git
